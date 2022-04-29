@@ -1,0 +1,41 @@
+*{
+    font-family: "Times New Roman", Times, serif;
+}
+
+nav .active{
+    color: #0072BB !important;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0072BB;
+  }
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height:3px;
+    bottom: 0;
+    left: 0;
+    background-color: #0072BB;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.carousel .carousel-item {
+    height: 450px;
+}
+
+.carousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+ }
