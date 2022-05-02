@@ -4,6 +4,7 @@
 
 nav .active{
     color: #0072BB !important;
+    font-weight: bold;
 }
 
 .hover-underline-animation {
@@ -11,7 +12,7 @@ nav .active{
     position: relative;
     color: #0072BB;
 }
-  
+
 .hover-underline-animation:after {
     content: '';
     position: absolute;
@@ -64,3 +65,9 @@ nav .active{
 .divsInfoHomepage{
     display: none;
 }
+
+.table-grey{
+    background-color: rgba(0,0,0,.03);
+}
+
+
