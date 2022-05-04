@@ -7,6 +7,10 @@ nav .active{
     font-weight: bold;
 }
 
+.text-blue-bidon{
+    color: #0072BB;
+}
+
 .hover-underline-animation {
     display: inline-block;
     position: relative;
@@ -68,6 +72,18 @@ nav .active{
 
 .table-grey{
     background-color: rgba(0,0,0,.03);
+}
+
+.redes{
+    font-size: 25px;
+    color: #0072BB;
+    margin-left: 20px;
+}
+
+.redes:hover{
+    font-size: 25px;
+    color: #09456b;
+    margin-left: 20px;
 }
 
 
