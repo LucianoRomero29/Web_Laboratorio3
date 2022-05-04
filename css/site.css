@@ -2,14 +2,20 @@
     font-family: "Times New Roman", Times, serif;
 }
 
-nav .active{
-    color: #0072BB !important;
-    font-weight: bold;
+.carousel .carousel-item {
+    height: 600px;
 }
 
-.text-blue-bidon{
-    color: #0072BB;
+.carousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
 }
+
+.divsInfoHomepage{
+    display: none;
+}
+
 
 .hover-underline-animation {
     display: inline-block;
@@ -35,14 +41,22 @@ nav .active{
     transform-origin: bottom left;
 }
 
-.carousel .carousel-item {
-    height: 600px;
+
+nav .active{
+    color: #0072BB !important;
+    font-weight: bold;
 }
 
-.carousel .carousel-indicators button {
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
+.redes{
+    font-size: 25px;
+    color: #0072BB;
+    margin-left: 20px;
+}
+
+.redes:hover{
+    font-size: 25px;
+    color: #09456b;
+    margin-left: 20px;
 }
 
 .separator {
@@ -66,24 +80,18 @@ nav .active{
     margin-left: .25em;
 }
 
-.divsInfoHomepage{
-    display: none;
-}
-
 .table-grey{
     background-color: rgba(0,0,0,.03);
 }
 
-.redes{
-    font-size: 25px;
+.text-blue-bidon{
     color: #0072BB;
-    margin-left: 20px;
 }
 
-.redes:hover{
-    font-size: 25px;
-    color: #09456b;
-    margin-left: 20px;
-}
+
+
+
+
+
 
 
