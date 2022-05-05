@@ -2,6 +2,16 @@
     font-family: "Times New Roman", Times, serif;
 }
 
+.btn-blue-bidon{
+    background-color: #0072BB !important;
+    color: white !important;
+}
+
+.btn-blue-bidon:hover{
+    background-color: #3393ce !important;
+    color: white !important;
+}
+
 .carousel .carousel-item {
     height: 600px;
 }
@@ -10,6 +20,10 @@
     width: 10px;
     height: 10px;
     border-radius: 100%;
+}
+
+.content{
+    margin-top: 80px;
 }
 
 .divsInfoHomepage{
@@ -39,6 +53,14 @@
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+.inputJoinUs{
+    display: none;
+}
+
+.joinus{
+    cursor: help;
 }
 
 
