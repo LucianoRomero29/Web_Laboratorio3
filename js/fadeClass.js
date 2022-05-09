@@ -3,6 +3,7 @@ function fadeDiv(div){
     var divs  = document.getElementsByClassName("divsFotos");
     for (let index = 0; index < divs.length; index++) {
         divs[index].style.display = "none";
+        $('[data-toggle="tooltip"]').tooltip('hide')
     }
     
     //Despues busco específicamente el div que quiero a través del click
