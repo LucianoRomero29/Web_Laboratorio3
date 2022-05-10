@@ -8,7 +8,7 @@
 }
 
 /* Esta imagen es del card dentro de la pagina de noticias */
-.background img, .carrusel img{
+.background img, .carruselIndex img{
     position: relative;
     top: -35px;
 }
@@ -31,7 +31,7 @@
     cursor: pointer;
 }
 
-.cardNoticia:hover{
+.cardNoticia:hover, .cardSubNews:hover{
     border: .1px solid #3393ce;
 }
   
@@ -55,6 +55,11 @@
     transform:translateY(70%);
 }
 
+.cardSubNews{
+    cursor: pointer;
+}
+
+
 .carousel .carousel-item-index {
     height: 600px;
 }
@@ -63,6 +68,11 @@
     width: 10px;
     height: 10px;
     border-radius: 100%;
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
 }
 
 .content{
