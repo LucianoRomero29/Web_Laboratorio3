@@ -60,7 +60,7 @@
 }
 
 
-.carousel .carousel-item-index {
+.itemIndex{
     height: 600px;
 }
 
@@ -70,8 +70,7 @@
     border-radius: 100%;
 }
 
-.carousel-control-next,
-.carousel-control-prev /*, .carousel-indicators */ {
+.flecha /*, .carousel-indicators */ {
     filter: invert(100%);
 }
 
