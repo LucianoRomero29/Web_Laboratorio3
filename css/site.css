@@ -17,6 +17,38 @@
     color: white !important;
 }
 
+.cardNoticia{
+    position:relative;
+    width: 320px;
+    height: 420px;
+    overflow:hidden;
+    cursor: pointer;
+}
+
+.cardNoticia:hover, .cardSubNews:hover{
+    border: .1px solid #3393ce;
+}
+  
+.cardNoticia > div{
+    height:100%;
+    width:100%;
+}
+  
+.cardNoticia .foreground{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    transform:translateY(80%);
+    background-color: #eee;
+    transition:.5s ease;
+}
+  
+.cardNoticia:hover .foreground{
+    transform:translateY(70%);
+}
+
 .cardSubNews{
     cursor: pointer;
 }
@@ -182,37 +214,7 @@ nav .active{
         top: -35px;
     }
 
-    .cardNoticia{
-        position:relative;
-        width: 320px;
-        height: 420px;
-        overflow:hidden;
-        cursor: pointer;
-    }
     
-    .cardNoticia:hover, .cardSubNews:hover{
-        border: .1px solid #3393ce;
-    }
-      
-    .cardNoticia > div{
-        height:100%;
-        width:100%;
-    }
-      
-    .cardNoticia .foreground{
-        position:absolute;
-        top: 0;
-        left: 0;
-        right:0;
-        bottom:0;
-        transform:translateY(80%);
-        background-color: #eee;
-        transition:.5s ease;
-    }
-      
-    .cardNoticia:hover .foreground{
-        transform:translateY(70%);
-    }
 
     .flecha /*, .carousel-indicators */ {
         filter: invert(100%);
@@ -226,7 +228,7 @@ nav .active{
 
 /* Media query para telefonos */
 @media (max-width: 1000px) {
-
+    
     .cardSubNews{
         margin-top: 50px !important;
         padding: 20px !important;
@@ -251,6 +253,10 @@ nav .active{
     .jornada span{
         text-align: center;
         margin-left: 15px;
+    }
+
+    .noticiaDos{
+        margin-top: 30px;
     }
 
     .sponsors img{
