@@ -13,6 +13,9 @@
     <script src="js/tooltip.js"></script>
     <script src="js/tabs.js"></script>
     <script src="js/joinUs.js"></script>
+    <script src="js/joinUs_form.js"></script>
+    <script src="js/validacionesGrales.js"></script>
+    <script src="js/sweetAlert.js"></script>
     <title>Únete</title>
 </head>
 <body>
@@ -57,7 +60,7 @@
         <div class="container">
             <div class="separator text-muted h5 joinus" data-toggle="tooltip" data-placement="right" title="Completa el formulario y te informaremos en tu casilla de email la respuesta a tu solicitud">¿Querés formar parte de Bidón?</div>
                 <br>
-                <form>
+                <form action="#" onsubmit="return validateFormOnSubmit(this);">
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
@@ -69,11 +72,11 @@
                         <div class="col-md-2"></div>
                         <div class="col-md-4">
                             <label for="lastname">Apellido</label>
-                            <input class="form-control" type="text" name="lastname" required><br>
+                            <input class="inputText input form-control" name="lastname" onfocusout="validarInputText(0)"><br>
                         </div>
                         <div class="col-md-4">
                             <label for="name">Nombre</label>
-                            <input class="form-control" type="text" name="name" required><br>
+                            <input class="inputText input form-control" name="name" onfocusout="validarInputText(1)"><br>
                         </div>
                         <div class="col-md-2"></div>
                     </div>
@@ -81,34 +84,34 @@
                         <div class="col-md-2"></div>
                         <div class="col-md-4">
                             <label for="adress">Calle</label>
-                            <input class="form-control" type="text" name="adress" required><br>
+                            <input class="inputText input form-control" name="adress" onfocusout="validarInputText(2)"><br>
                         </div>
                         <div class="col-md-2">
                             <label for="nro">N°</label>
-                            <input class="form-control" type="number" name="nro" required><br>
+                            <input id="nro" class="input form-control" name="nro" onfocusout="validarNroDireccion()"><br>
                         </div>
                         <div class="col-md-1">
                             <label for="floor">Piso</label>
-                            <input class="form-control" type="number" name="floor"><br>
+                            <input id="piso" class="form-control" name="floor" onfocusout="validarPiso()"><br>
                         </div>
                         <div class="col-md-1">
                             <label for="apartment">Depto</label>
-                            <input class="form-control" type="text" name="apartment"><br>
+                            <input id="depto" class="form-control" name="apartment" onfocusout="validarDepto()"><br>
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-2"></div>
                         <div class="col-md-4">
                             <label for="email">Email</label>
-                            <input class="form-control" type="email" name="email" required><br>
+                            <input id="email" class="input form-control" name="email" onfocusout="validarEmail()"><br>
                         </div>
                         <div class="col-md-2">
                             <label for="dni">DNI</label>
-                            <input class="form-control" type="number" name="dni" min="11111111" max="99999999" required><br>
+                            <input id="dni" class="input form-control" name="dni" onfocusout="validarDni()"><br>
                         </div>
                         <div class="col-md-2">
                             <label for="celphone">Teléfono</label>
-                            <input class="form-control" type="number" min="1111111111" max="9999999999" name="celphone" required><br>
+                            <input id="telefono" class="input form-control" name="celphone" placeholder="Sin guiones" onfocusout="validarTelefono()"><br>
                         </div>
                     </div>
                     <br>
@@ -123,7 +126,7 @@
                         <div class="col-md-2"></div>
                         <div class="col-md-4">
                             <label>Puesto</label>
-                            <select class="form-select mb-3" required>
+                            <select class="form-select mb-3 input">
                                 <option value="" selected>Seleccione una opción</option>
                                 <option value="arquero">Arquero</option>
                                 <option value="defensor">Defensor</option>
@@ -133,7 +136,7 @@
                         </div>
                         <div class="col-md-4">
                             <label>Pierna hábil</label>
-                            <select class="form-select mb-3" required>
+                            <select class="form-select mb-3 input">
                                 <option value="" selected>Seleccione una opción</option>
                                 <option value="derecha">Derecha</option>
                                 <option value="izquierda">Izquierda</option>
@@ -144,7 +147,7 @@
                         <div class="col-md-2"></div>
                         <div class="col-md-4">
                             <label>¿Cómo nos encontraste?</label>
-                            <select id="selectFindUs" class="form-select mb-3" onchange="showInput()" required>
+                            <select id="selectFindUs" class="form-select mb-3 input" onchange="showInput()">
                                 <option value="" selected>Seleccione una opción</option>
                                 <option value="1">A través de la Redo</option>
                                 <option value="2">Redes sociales</option>
@@ -159,7 +162,7 @@
                     </div>
                     <br>
                     <div class="text-center mt-2">
-                        <button class="btn btn-blue-bidon" type="submit">
+                        <button id="enviar" class="btn btn-blue-bidon" type="submit">
                             ENVIAR
                         </button>
                     </div>

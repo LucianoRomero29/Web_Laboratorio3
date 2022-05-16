@@ -12,6 +12,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/tabs.js"></script>
     <script src="js/tooltip.js"></script>
+    <script src="js/contactUs_form.js"></script>
+    <script src="js/validacionesGrales.js"></script>
+    <script src="js/sweetAlert.js"></script>
     <title>Contáctenos</title>
 </head>
 <body>
@@ -55,12 +58,12 @@
         <br>
         <div class="container">
             <div class="separator text-muted h5">Contáctenos</div>
-                <form>
+                <form action="#" onsubmit="return validateFormOnSubmitContact(this);">
                     <div class="row">
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
                             <label for="lastname">Apellido</label>
-                            <input class="form-control" type="text" name="lastname" required><br>
+                            <input class="inputText input form-control" name="lastname" onfocusout="validarInputText(0)"><br>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
@@ -68,7 +71,7 @@
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
                             <label for="name">Nombre</label>
-                            <input class="form-control" type="text" name="name" required><br>
+                            <input class="inputText input form-control" name="name" onfocusout="validarInputText(1)"><br>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
@@ -76,7 +79,7 @@
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
                             <label for="email">Email</label>
-                            <input class="form-control" type="email" name="email" required><br>
+                            <input id="email" class="input form-control" name="email" onfocusout="validarEmail()"><br>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
@@ -84,12 +87,12 @@
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
                             <label for="consulta">Consulta</label>
-                            <textarea class="form-control" name="consulta" rows="4" required></textarea><br>
+                            <textarea id="consulta" class="input form-control" name="consulta" rows="4" onfocusout="validarMinLengthTextArea()"></textarea><br>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
                     <div class="text-center">
-                        <button class="btn btn-blue-bidon" type="submit">
+                        <button id="enviar" class="btn btn-blue-bidon" type="submit">
                             ENVIAR
                         </button>
                     </div>

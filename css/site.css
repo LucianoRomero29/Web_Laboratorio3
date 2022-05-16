@@ -111,6 +111,14 @@
     transform-origin: bottom left;
 }
 
+.inputSuccess{
+    border-bottom: 2px solid green !important;
+}
+
+.inputError{
+    border-bottom: 2px solid #E90B2F !important;
+}
+
 .inputJoinUs{
     display: none;
 }
