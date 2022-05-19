@@ -76,7 +76,7 @@ function validateFormOnSubmit(form) {
         Swal.fire({
             icon: 'error',
             title: 'Error',
-            text: 'Por favor corrija los campos que están incorrectos en rojo',
+            text: 'Por favor corrija los campos que están incorrectos (en rojo)',
         });
         return false;
     }else{

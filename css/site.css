@@ -17,6 +17,10 @@
     color: white !important;
 }
 
+.camiseta{
+    height: 300px !important;
+}
+
 .cardNoticia{
     position:relative;
     width: 320px;
@@ -135,7 +139,6 @@
     transform: scale(1.1);
     transition: 1s;
 }
-
 
 nav .active{
     color: #0072BB !important;
@@ -257,17 +260,21 @@ nav .active{
         margin-top: 30px !important;
     }
 
+    .divsFotos img{
+        padding: 30px;
+        margin-top: 15px;
+    }
+
     .fotos{
         padding: 60px;
     }
 
     .fotos .card{
         margin-top: 25px;
-    }
-
-    .divsFotos img{
-        padding: 30px;
-        margin-top: 15px;
+    } 
+    
+    .itemIndex{
+        height: 200px;
     }
 
     .jornada span{
