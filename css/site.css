@@ -17,7 +17,7 @@
     color: white !important;
 }
 
-.camiseta{
+.maxHeight{
     height: 300px !important;
 }
 
@@ -81,6 +81,7 @@
 .divsInfoHomepage, .divsFotos{
     display: none;
 }
+
 
 .fade-in-text {
     animation: fadeIn linear 1.5s;
@@ -235,7 +236,7 @@ nav .active{
     }
 
     .divsFotos{
-        margin: 30px;
+        margin: 15px;
     }
 
     .ultimasNoticias{
