@@ -186,6 +186,11 @@ nav .active{
 .text-blue-bidon{
     color: #0072BB;
 }
+
+.verMas:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
   
 /* Animación divs galeria de fotos */
 @keyframes fadeIn {
@@ -226,6 +231,10 @@ nav .active{
         top: -70px;
     }
 
+    .divsFotos{
+        margin: 30px;
+    }
+
     .ultimasNoticias{
         margin-left: 50px;
     }
@@ -254,6 +263,11 @@ nav .active{
 
     .fotos .card{
         margin-top: 25px;
+    }
+
+    .divsFotos img{
+        padding: 30px;
+        margin-top: 15px;
     }
 
     .jornada span{
