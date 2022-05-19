@@ -86,6 +86,10 @@
     -ms-animation: fadeIn linear 1.5s;
 }
 
+.flecha /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
 
 .hover-underline-animation {
     display: inline-block;
@@ -219,13 +223,7 @@ nav .active{
     /* Esta imagen es del card dentro de la pagina de noticias */
     .background img, .carruselIndex img{
         position: relative;
-        top: -35px;
-    }
-
-    
-
-    .flecha /*, .carousel-indicators */ {
-        filter: invert(100%);
+        top: -70px;
     }
 
     .ultimasNoticias{
