@@ -13,11 +13,6 @@ function fadeDiv(div){
 }
 
 function verMas(div, divBtn){
-    //Primero apago todos los divs cuando hago click en cualquier boton
-    var divs  = document.getElementsByClassName("masFotos");
-    for (let index = 0; index < divs.length; index++) {
-        divs[index].style.display = "none";
-    }
 
     //Despues busco específicamente el div que quiero a través del click
     var myDiv = document.getElementById(div);

@@ -56,12 +56,10 @@
         </nav>
     </section>
     <section class="content">
-        <br>
         <div class="container">
             <div class="separator text-muted h5 joinus" data-toggle="tooltip" data-placement="right" title="Completa el formulario y te informaremos en tu casilla de email la respuesta a tu solicitud">¿Querés formar parte de Bidón?</div>
-                <br>
                 <form action="#" onsubmit="return validateFormOnSubmit(this);">
-                    <div class="row">
+                    <div class="row mt-3">
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
                             <div class="text-blue-bidon fw-bold subtituloForm">Datos personales</div>
@@ -72,50 +70,49 @@
                         <div class="col-md-2"></div>
                         <div class="col-md-4">
                             <label for="lastname">Apellido</label>
-                            <input class="inputText input form-control" name="lastname" onfocusout="validarInputText(0)"><br>
+                            <input class="inputText input form-control" name="lastname" onfocusout="validarInputText(0)">
                         </div>
                         <div class="col-md-4">
                             <label for="name">Nombre</label>
-                            <input class="inputText input form-control" name="name" onfocusout="validarInputText(1)"><br>
+                            <input class="inputText input form-control" name="name" onfocusout="validarInputText(1)">
                         </div>
                         <div class="col-md-2"></div>
                     </div>
-                    <div class="row mt-2">
+                    <div class="row mt-3">
                         <div class="col-md-2"></div>
                         <div class="col-md-4">
                             <label for="adress">Calle</label>
-                            <input class="inputText input form-control" name="adress" onfocusout="validarInputText(2)"><br>
+                            <input class="inputText input form-control" name="adress" onfocusout="validarInputText(2)">
                         </div>
                         <div class="col-md-2">
                             <label for="nro">N°</label>
-                            <input id="nro" class="input form-control" name="nro" onfocusout="validarNroDireccion()"><br>
+                            <input id="nro" class="input form-control" name="nro" onfocusout="validarNroDireccion()">
                         </div>
                         <div class="col-md-1">
                             <label for="floor">Piso</label>
-                            <input id="piso" class="form-control" name="floor" onfocusout="validarPiso()"><br>
+                            <input id="piso" class="form-control" name="floor" onfocusout="validarPiso()">
                         </div>
                         <div class="col-md-1">
                             <label for="apartment">Depto</label>
-                            <input id="depto" class="form-control" name="apartment" onfocusout="validarDepto()"><br>
+                            <input id="depto" class="form-control" name="apartment" onfocusout="validarDepto()">
                         </div>
                     </div>
-                    <div class="row mt-2">
+                    <div class="row mt-3">
                         <div class="col-md-2"></div>
                         <div class="col-md-4">
                             <label for="email">Email</label>
-                            <input id="email" class="input form-control" name="email" placeholder="Ej: ejemplo@gmail.com" onfocusout="validarEmail()"><br>
+                            <input id="email" class="input form-control" name="email" placeholder="Ej: ejemplo@gmail.com" onfocusout="validarEmail()">
                         </div>
                         <div class="col-md-2">
                             <label for="dni">DNI <span class="text-success" style="cursor: pointer;" data-toggle="tooltip" data-placement="top" title="Sin puntos">(?)</span></label>
-                            <input id="dni" class="input form-control" name="dni" placeholder="Ej: 35987234" onfocusout="validarDni()"><br>
+                            <input id="dni" class="input form-control" name="dni" placeholder="Ej: 35987234" onfocusout="validarDni()">
                         </div>
                         <div class="col-md-2">
                             <label for="celphone">Teléfono <span class="text-success" style="cursor: pointer;" data-toggle="tooltip" data-placement="top" title="Sin guiones">(?)</span></label>
-                            <input id="telefono" class="input form-control" name="celphone" placeholder="3492565678" onfocusout="validarTelefono()"><br>
+                            <input id="telefono" class="input form-control" name="celphone" placeholder="3492565678" onfocusout="validarTelefono()">
                         </div>
                     </div>
-                    <br>
-                    <div class="row">
+                    <div class="row mt-3">
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
                             <div class="text-blue-bidon fw-bold subtituloForm">Información adicional</div>
@@ -143,7 +140,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row mt-2">
+                    <div class="row mt-3">
                         <div class="col-md-2"></div>
                         <div class="col-md-4">
                             <label>¿Cómo nos encontraste?</label>
@@ -160,8 +157,7 @@
                             <input id="inputOption" class="form-control" type="text">
                         </div>
                     </div>
-                    <br>
-                    <div class="text-center mt-2">
+                    <div class="text-center mt-3">
                         <button id="enviar" class="btn btn-blue-bidon" type="submit">
                             ENVIAR
                         </button>
@@ -169,12 +165,10 @@
                 </form>
             </div>
         </div>
-        <br>
     </section>
-    <br>
     <footer>
         <!-- Seccion de sponsors y redes  -->
-        <div class="container">
+        <div class="container mt-3">
             <div class="separator text-muted h5">Sponsors</div>
             <div class="mt-5 row text-center sponsors">
                 <div class="col-6 col-sm-6 col-md-3">
@@ -191,7 +185,6 @@
                 </div>
             </div>
         </div>
-        <br>
         <div class="container mt-3">
             <div class="separator text-muted h5">Seguinos en nuestras redes</div>
             <div class="text-center">
@@ -199,13 +192,8 @@
                 <a class="redes" href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a class="redes" href="https://www.instagram.com/deportivo.bidon/" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
-            <br>
-            <!-- <div class="container d-flex justify-content-between text-muted mb-2">
-                <b>Deportivo Bidon 2022 Copyright © - Todos los derechos reservados</b>
-                <b>Desarrollado por © Luciano Romero</b>
-            </div> -->
         </div>
-        <div class="customFooter d-flex justify-content-between">
+        <div class="mt-3 customFooter d-flex justify-content-between">
             <b>Deportivo Bidon 2022 Copyright © - Todos los derechos reservados</b>
             <b>Desarrollado por © Luciano Romero</b>
         </div>
