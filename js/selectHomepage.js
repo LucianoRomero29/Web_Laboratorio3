@@ -1,28 +1,28 @@
 $(function() {
     $('#selectInfo').change(function(){
         if($('#selectInfo').val() == "jornada") {
-            $('#jornada').css("display", "block"); 
-            $('#posiciones').css("display", "none"); 
-            $('#goleadores').css("display", "none");
-            $('#promedios').css("display", "none"); 
+            $('#jornada').fadeIn("slow");
+            $('#posiciones').fadeOut("fast") 
+            $('#goleadores').fadeOut("fast")
+            $('#promedios').fadeOut("fast") 
         }
         if($('#selectInfo').val() == "posiciones") {
-            $('#posiciones').css("display", "block"); 
-            $('#jornada').css("display", "none"); 
-            $('#goleadores').css("display", "none");
-            $('#promedios').css("display", "none"); 
+            $('#posiciones').fadeIn("slow");
+            $('#jornada').fadeOut("fast") 
+            $('#goleadores').fadeOut("fast")
+            $('#promedios').fadeOut("fast") 
         }
         if($('#selectInfo').val() == "goleadores") {
-            $('#goleadores').css("display", "block"); 
-            $('#jornada').css("display", "none"); 
-            $('#posiciones').css("display", "none");
-            $('#promedios').css("display", "none"); 
+            $('#goleadores').fadeIn("slow");
+            $('#jornada').fadeOut("fast") 
+            $('#posiciones').fadeOut("fast")
+            $('#promedios').fadeOut("fast") 
         }
         if($('#selectInfo').val() == "promedios") {
-            $('#promedios').css("display", "block"); 
-            $('#jornada').css("display", "none"); 
-            $('#goleadores').css("display", "none"); 
-            $('#posiciones').css("display", "none");
+            $('#promedios').fadeIn("slow");
+            $('#jornada').fadeOut("fast") 
+            $('#goleadores').fadeOut("fast") 
+            $('#posiciones').fadeOut("fast")
         } 
     });
 });

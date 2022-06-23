@@ -145,10 +145,6 @@
     transition: 1s;
 }
 
-.masFotos{
-    display: none;
-}
-
 nav .active{
     color: #0072BB !important;
     font-weight: bold;

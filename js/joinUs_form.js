@@ -68,6 +68,25 @@ function validarDni(){
     }
 }
 
+function validarFoto(){
+    var fileInput = document.getElementById('fotoPerfil');
+           
+    var filePath = fileInput.value;
+    
+    // Allowing file type
+    var allowedExtensions =/(\.png|\.jpg|\.jpeg)$/i;
+        
+    if (!allowedExtensions.exec(filePath)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Formato incorrecto del archivo, sólo se permite png, jpg, jpeg',
+        });
+        fileInput.value = '';
+        return false;
+    }
+}
+
 function validateFormOnSubmit(form) {
 
     botonEnviar = document.getElementById("enviar");
