@@ -17,7 +17,6 @@
 </head>
 <body>
     <section>
-        <!-- Seccion header que se va a repetir -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand logoBidon" href="index.html">
@@ -84,9 +83,6 @@
             </div>
         </div>
         <div class="container mt-4">
-            <!-- Aca va el select con la info del torneo local, descensos, torneos ganados, goleadores del equipo, etc. 
-                Osea este select va a modificar el content del div de abajo
-            -->
             <select id="selectInfo" class="form-select mb-3 text-center text-uppercase">
                 <option value="jornada" selected>Última jornada</option>
                 <option value="goleadores">Goleadores</option>
@@ -97,7 +93,7 @@
         <div class="container" id="jornada">
             <div class="separator text-muted">Jornada</div>
             <div class="card mt-1">
-                <div class="card-header" style="border-bottom-color: black;">
+                <div class="card-header">
                     <div class="row text-center">
                         <div class="col">
                             <b>Partidos</b>
@@ -570,7 +566,6 @@
         </div>
     </section>
     <footer>
-        <!-- Seccion de sponsors y redes  -->
         <div class="container mt-3">
             <div class="separator text-muted h5">Sponsors</div>
             <div class="mt-5 row text-center sponsors">

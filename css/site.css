@@ -67,6 +67,10 @@
     margin-top: 80px;
 }
 
+.cursorPointer{
+    cursor: pointer;
+}
+
 .customFooter{
     background-color: #0072BB; 
     color: white; 
@@ -139,6 +143,10 @@
 .logoBidon:hover{
     transform: scale(1.1);
     transition: 1s;
+}
+
+.masFotos{
+    display: none;
 }
 
 nav .active{
