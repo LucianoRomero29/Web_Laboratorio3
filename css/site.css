@@ -23,10 +23,11 @@
 
 .cardNoticia{
     position:relative;
-    width: 320px;
+    width: 300px;
     height: 420px;
     overflow:hidden;
     cursor: pointer;
+    margin: 0px auto;
 }
 
 /* .cardNoticia:hover, .cardSubNews:hover{
@@ -238,13 +239,13 @@ table tbody tr:hover {
 /* Media query para PC  */
 @media (min-width: 1001px){
     .itemIndex{
-        height: 600px;
+        height: 500px;
     }
 
     /* Esta imagen es del card dentro de la pagina de noticias */
     .background img, .carruselIndex img{
         position: relative;
-        top: -70px;
+        top: -55px;
     }
 
     .divsFotos{
@@ -256,6 +257,17 @@ table tbody tr:hover {
     }
 }
 
+/* Media query para tablet */
+@media (min-width: 700px) and (max-width: 1000px) {
+    .itemIndex{
+        height: 380px;
+    }
+
+    .background img, .carruselIndex img{
+        position: relative;
+        top: -30px;
+    }
+}
 
 /* Media query para telefonos */
 @media (max-width: 700px) {
