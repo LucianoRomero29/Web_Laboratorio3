@@ -12,7 +12,6 @@
     <script src="js/fontawesome.js"></script>
     <script src="js/tabs.js"></script>
     <script src="js/tooltip.js"></script>
-    <script src="js/selectHomepage.js"></script>
     <script src="js/jQueryEffects.js"></script>
     <title>Homepage</title>
 </head>
@@ -21,14 +20,14 @@
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand logoBidon" href="index.html">
-                    <img src="img/logoBidon.png" alt="Deportivo Bidón" width="55">
+                    <img class="imgBidon" src="img/logoBidon.png" alt="Deportivo Bidón" width="55">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto mb-2 ">
-                        <li class="nav-item hover-underline-animation tuki">
+                        <li class="nav-item hover-underline-animation">
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item hover-underline-animation">
@@ -152,161 +151,6 @@
                 </table>
             </div>
         </div>
-        <!-- <div class="container" id="jornada">
-            <div class="separator text-muted">Jornada</div>
-            <div class="card mt-1">
-                <div class="card-header text-center">
-                    <div class="row">
-                        <div class="col">
-                            <b>Partidos</b>
-                        </div>
-                        <div class="col col-md-2">
-                            <b>Fecha y Hora</b>
-                        </div>
-                        <div class="col col-md-2">
-                            <b>Lugar</b>
-                        </div>
-                    </div>
-                </div>
-                <ul class="list-group jornada">
-                    <li class="list-group-item d-flex text-center">
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    Deportivo Bidon 
-                                </div>
-                                <div class="col-md-1">
-                                    <img src="img/equipos_logo/equipo7.png" width="25">
-                                </div>
-                                <div class="col-md-3">
-                                    <span class="text-success h4 m-5">8 - 4</span>
-                                </div>
-                                <div class="col-md-1">
-                                    <img src="img/equipos_logo/equipo10.png" width="25">
-                                </div>
-                                <div class="col-md-3">
-                                    G2
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <span class="text-muted">21/05/2022 13:30hs</span> 
-                        </div>
-                        <div class="col">
-                            <span class="text-muted">Cancha F6 - 1</span>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex text-center">
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    Rústicos FC
-                                </div>
-                                <div class="col-md-1">
-                                    <img src="img/equipos_logo/equipo1.png" width="25">
-                                </div>
-                                <div class="col-md-3">
-                                    <span class="text-success h4 m-5">5 - 9</span> 
-                                </div>
-                                <div class="col-md-1">
-                                    <img src="img/equipos_logo/equipo2.png" width="25">
-                                </div>
-                                <div class="col-md-3">
-                                    Mercadito Lulu
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <span class="text-muted">21/05/2022 13:30hs</span> 
-                        </div>
-                        <div class="col-md-2">
-                            <span class="text-muted">Cancha F6 - 6</span>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex text-center">
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    Barlezona
-                                </div>
-                                <div class="col-md-1">
-                                    <img src="img/equipos_logo/equipo8.png" width="25">
-                                </div>
-                                <div class="col-md-3">
-                                    <span class="text-success h4 m-5">1 - 0</span>
-                                </div>
-                                <div class="col-md-1">
-                                    <img src="img/equipos_logo/equipo3.png" width="25">
-                                </div>
-                                <div class="col-md-3">
-                                    Medio Tanque
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <span class="text-muted">21/05/2022 14:35hs</span> 
-                        </div>
-                        <div class="col-md-2">
-                            <span class="text-muted">Cancha F6 - 4</span>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex text-center">
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    Transporte Miguelito
-                                </div>
-                                <div class="col-md-1">
-                                    <img src="img/equipos_logo/equipo4.png" width="20">
-                                </div>
-                                <div class="col-md-3">
-                                    <span class="text-success h4 m-5">4 - 0</span> 
-                                </div>
-                                <div class="col-md-1">
-                                    <img src="img/equipos_logo/equipo9.png" width="30">
-                                </div>
-                                <div class="col-md-3">
-                                    Panadería Evamar
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <span class="text-muted">21/05/2022 14:35hs</span> 
-                        </div>
-                        <div class="col-md-2">
-                            <span class="text-muted">Cancha F6 - 3</span>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex text-center">
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    La Ranchada
-                                </div>
-                                <div class="col-md-1">
-                                    <img src="img/equipos_logo/equipo6.png" width="25">
-                                </div>
-                                <div class="col-md-3">
-                                    <span class="text-success h4 m-5">2 - 6</span>
-                                </div>
-                                <div class="col-md-1">
-                                    <img src="img/equipos_logo/equipo5.png" width="25">
-                                </div>
-                                <div class="col-md-3">
-                                    Los Muñecos
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <span class="text-muted">21/05/2022 15:40hs</span> 
-                        </div>
-                        <div class="col-md-2">
-                            <span class="text-muted">Cancha F6 - 5</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div> -->
         <div class="container divsInfoHomepage" id="goleadores">
             <div class="separator text-muted">Goleadores</div>
             <div class="card table-responsive">
@@ -631,16 +475,16 @@
         <div class="container mt-3">
             <div class="separator text-muted h5">Sponsors</div>
             <div class="mt-5 row text-center sponsors">
-                <div class="col-6 col-sm-6 col-md-3">
+                <div class="col-6 col-sm-6 col-md-3 sponsorHover">
                     <img class="img-fluid" src="img/sponsors/MR.png" alt="Establecimiento Metalúrgico Rafaela">
                 </div>
-                <div class="col-6 col-sm-6 col-md-3">
+                <div class="col-6 col-sm-6 col-md-3 sponsorHover">
                     <img class="img-fluid" src="img/sponsors/KLR.png" alt="Kiosco La Reina">
                 </div>
-                <div class="col-6 col-sm-6 col-md-3">
+                <div class="col-6 col-sm-6 col-md-3 sponsorHover">
                     <img class="img-fluid" src="img/sponsors/LHPT.png" alt="Lo Hago por Ti - Bordados y Costuras">
                 </div>
-                <div class="col-6 col-sm-6 col-md-3">
+                <div class="col-6 col-sm-6 col-md-3 sponsorHover">
                     <img class="img-fluid" src="img/sponsors/sumak.jpg" alt="Sumak">
                 </div>
             </div>

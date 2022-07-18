@@ -4,8 +4,6 @@ $(document).ready(function(){
     $("#partidosFotos").click(function(){
         $("#partidos").slideToggle();
         $("#camisetas").hide();
-        $("#tercerTiempo").hide();
-        $("#memes").hide();
         $(".masFotos").hide();
     });
 
