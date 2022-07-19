@@ -267,6 +267,10 @@ table tbody tr:hover {
         position: relative;
         top: -30px;
     }
+    
+    .divsFotos img{
+        margin-top: 10px;
+    }
 }
 
 /* Media query para telefonos */
@@ -288,6 +292,10 @@ table tbody tr:hover {
     .divsFotos img{
         padding: 30px;
         margin-top: 15px;
+    }
+
+    .divInput{
+        margin-top: 10px !important;
     }
 
     .fotos{
