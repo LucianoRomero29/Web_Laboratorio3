@@ -83,7 +83,7 @@
     vertical-align: middle;
 }
 
-.divsInfoHomepage, .divsFotos{
+.divsInfoHomepage, .divsFotos, #joinUsDiv{
     display: none;
 }
 

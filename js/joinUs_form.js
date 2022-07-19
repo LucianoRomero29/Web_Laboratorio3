@@ -1,3 +1,27 @@
+$(document).ready(function(){
+
+    $("#joinUsForm").submit(function(e){
+        e.preventDefault();
+        var form = document.forms.joinUsForm;
+
+        if(form.lastname.classList.contains("inputError") || form.name.classList.contains("inputError") || form.email.classList.contains("inputError") || form.adress.classList.contains("inputError") || form.nro.classList.contains("inputError") || form.floor.classList.contains("inputError") || form.apartment.classList.contains("inputError") || form.dni.classList.contains("inputError") || form.celphone.classList.contains("inputError")){
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Por favor corrija los campos que están incorrectos (en rojo)',
+            });
+            return false;
+        }else{
+            Swal.fire({
+                icon: 'success',
+                title: 'Correcto',
+                text: "Formulario enviado correctamente, pronto recibirá una respuesta. ¡Muchas gracias!",
+            })
+            setTimeout(function(){form.submit()}, 3000);
+        }
+    })
+
+})
 
 function validarNroDireccion(){
     nro = document.getElementById("nro");
@@ -87,23 +111,3 @@ function validarFoto(){
     }
 }
 
-function validateFormOnSubmit(form) {
-
-    botonEnviar = document.getElementById("enviar");
-
-    if(form.lastname.classList.contains("inputError") || form.name.classList.contains("inputError") || form.email.classList.contains("inputError") || form.adress.classList.contains("inputError") || form.nro.classList.contains("inputError") || form.floor.classList.contains("inputError") || form.apartment.classList.contains("inputError") || form.dni.classList.contains("inputError") || form.celphone.classList.contains("inputError")){
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Por favor corrija los campos que están incorrectos (en rojo)',
-        });
-        return false;
-    }else{
-        Swal.fire({
-            icon: 'success',
-            title: 'Correcto',
-            text: "Formulario enviado correctamente, pronto recibirá una respuesta. ¡Muchas gracias!",
-        })
-        setTimeout(function(){form.submit()}, 3000);
-    }
-}

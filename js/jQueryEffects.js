@@ -3,28 +3,39 @@ $(document).ready(function(){
     $('#selectInfo').change(function(){
         if($('#selectInfo').val() == "jornada") {
             $('#jornada').fadeIn("slow");
-            $('#posiciones').fadeOut("fast") 
-            $('#goleadores').fadeOut("fast")
-            $('#promedios').fadeOut("fast") 
+            $('#posiciones').fadeOut("fast"); 
+            $('#goleadores').fadeOut("fast");
+            $('#promedios').fadeOut("fast"); 
         }
         if($('#selectInfo').val() == "posiciones") {
             $('#posiciones').fadeIn("slow");
-            $('#jornada').fadeOut("fast") 
-            $('#goleadores').fadeOut("fast")
-            $('#promedios').fadeOut("fast") 
+            $('#jornada').fadeOut("fast"); 
+            $('#goleadores').fadeOut("fast");
+            $('#promedios').fadeOut("fast"); 
         }
         if($('#selectInfo').val() == "goleadores") {
             $('#goleadores').fadeIn("slow");
-            $('#jornada').fadeOut("fast") 
-            $('#posiciones').fadeOut("fast")
-            $('#promedios').fadeOut("fast") 
+            $('#jornada').fadeOut("fast"); 
+            $('#posiciones').fadeOut("fast");
+            $('#promedios').fadeOut("fast"); 
         }
         if($('#selectInfo').val() == "promedios") {
             $('#promedios').fadeIn("slow");
-            $('#jornada').fadeOut("fast") 
-            $('#goleadores').fadeOut("fast") 
-            $('#posiciones').fadeOut("fast")
+            $('#jornada').fadeOut("fast");
+            $('#goleadores').fadeOut("fast");
+            $('#posiciones').fadeOut("fast");
         } 
+    });
+
+    $("#selectQuery").change(function(){
+        if($("#selectQuery").val() == "0"){
+            $("#generalQueryDiv").fadeIn("slow");
+            $("#joinUsDiv").fadeOut("fast");
+        }
+        else{
+            $("#joinUsDiv").fadeIn("slow");
+            $("#generalQueryDiv").fadeOut("fast");
+        }
     });
 
     $(".cardNoticia, .cardSubNews").mouseenter(function () {
@@ -117,6 +128,4 @@ $(document).ready(function(){
             
         }
     );
-
-    //Falta 1 mas
 });
