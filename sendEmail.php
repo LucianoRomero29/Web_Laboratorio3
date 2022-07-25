@@ -1,17 +1,37 @@
 <?php
 
-// $formGeneral = $_POST["General"];
+$formGeneral = $_POST["General"];
+
 // $formJoinUs  = $_POST["JoinUs"]; 
 
 // //El que NO sea nulo, va a ser el form que envíe el email
-// if(isset($_POST["General"])){
-//     $nombre     = $formGeneral["name"];
-//     $apellido   = $formGeneral["lastname"];
-//     $email      = $formGeneral["email"];
-//     $consulta   = $formGeneral["query"];
+if(isset($_POST["General"])){
+   $nombre     = $formGeneral["name"];
+   $apellido   = $formGeneral["lastname"];
+   $email      = $formGeneral["email"];
+   $consulta   = $formGeneral["query"];
 
-//     var_dump($formGeneral);
-// }
+   if(isset($nombre) || isset($apellido) || isset($email) || isset($consulta)){
+
+      $header = "From: $email \r\n";
+      $header.= "X-Mailer: PHP/" . phpversion() . " \r\n";
+      $header.= "Mime-Version: 1.0 \r\n";
+      $header.= "Content-Type: text/plain";
+
+      $mensaje = "Este mensaje fue enviado por: $nombre \r\n";
+      $mensaje.= "Su email es: $email \r\n";
+      $mensaje.= "Mensaje: $consulta \r\n";
+      $mensaje.= "Enviado el día: " . date("d/m/Y", time());
+
+      $para = "Lucianooromero1@gmail.com";
+      $asunto = "Probando envío de email";
+
+      mail($para, $asunto, utf8_decode($mensaje), $header);
+
+      header("Location: contact.html");
+   }
+}
+
 
 // if(isset($_POST["JoinUs"])){
 //     $nombre     = $formJoinUs["name"];
@@ -31,25 +51,3 @@
 
 //     var_dump($formGeneral);
 // }
-
-$header = "From: noreply@example.com" . "\r\n";
-$header.= "Reply-To: noreply@example.com" . "\r\n";
-$header.= "X-Mailer: PHP/". phpversion();
-
-$destinatario = "Lucianooromero1@gmail.com"; 
-$asunto = "Este mensaje es de prueba"; 
-$cuerpo = ' 
-<html> 
-<head> 
-   <title>Prueba de correo</title> 
-</head> 
-<body> 
-<h1>Hola amigos!</h1> 
-<p> 
-<b>Bienvenidos a mi correo electrónico de prueba</b>. Estoy encantado de tener tantos lectores. Este cuerpo del mensaje es del artículo de envío de mails por PHP. Habría que cambiarlo para poner tu propio cuerpo. Por cierto, cambia también las cabeceras del mensaje. 
-</p> 
-</body> 
-</html> 
-'; 
-
-@mail($destinatario,$asunto,$cuerpo,$header);

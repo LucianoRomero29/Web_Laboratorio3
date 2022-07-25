@@ -3,24 +3,26 @@ $(document).ready(function(){
         e.preventDefault(); 
         var form = document.forms.generalQueryForm;
 
-        if(form.lastname.classList.contains("inputError") || form.name.classList.contains("inputError") || form.email.classList.contains("inputError") || form.consulta.classList.contains("inputError")){
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'Por favor corrija los campos que están incorrectos (en rojo)',
-            });
-            return false;
-            
-        }else{
-            Swal.fire({
-                icon: 'success',
-                title: 'Correcto',
-                text: "Formulario enviado correctamente, pronto recibirá una respuesta. ¡Muchas gracias!",
-            })
-            setTimeout(function(){form.submit(); location.reload()}, 3000);  
-        }
-    })
+        arrayForm = form.elements;
 
+        for (let index = 0; index < arrayForm.length; index++) {
+            if(arrayForm[index].classList.contains("inputError"))  {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Por favor corrija los campos que están incorrectos (en rojo)',
+                });
+                return false;
+            }
+        }
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Correcto',
+            text: "Formulario enviado correctamente, pronto recibirá una respuesta. ¡Muchas gracias!",
+        })
+        setTimeout(function(){form.submit();}, 1800);  
+    })
 });
 
 
@@ -34,22 +36,22 @@ function validarMinLengthTextArea(){
     }
 }
 
-function validateFormOnSubmitContact(form) {
-    if(form.lastname.classList.contains("inputError") || form.name.classList.contains("inputError") || form.email.classList.contains("inputError") || form.consulta.classList.contains("inputError")){
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Por favor corrija los campos que están incorrectos (en rojo)',
-        });
-        return false;
+// function validateFormOnSubmitContact(form) {
+//     if(form.lastname.classList.contains("inputError") || form.name.classList.contains("inputError") || form.email.classList.contains("inputError") || form.consulta.classList.contains("inputError")){
+//         Swal.fire({
+//             icon: 'error',
+//             title: 'Error',
+//             text: 'Por favor corrija los campos que están incorrectos (en rojo)',
+//         });
+//         return false;
         
-    }else{
-        Swal.fire({
-            icon: 'success',
-            title: 'Correcto',
-            text: "Formulario enviado correctamente, pronto recibirá una respuesta. ¡Muchas gracias!",
-        })
-        setTimeout(function(){form.submit()}, 3000);  
-    }
-}
+//     }else{
+//         Swal.fire({
+//             icon: 'success',
+//             title: 'Correcto',
+//             text: "Formulario enviado correctamente, pronto recibirá una respuesta. ¡Muchas gracias!",
+//         })
+//         setTimeout(function(){form.submit()}, 3000);  
+//     }
+// }
 
