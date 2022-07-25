@@ -1,68 +1,57 @@
 <?php
 
+//Mail enviado desde el select CONSULTA GENERAL
 if(isset($_POST["General"])){
-
     $formGeneral = $_POST["General"];
+    $email       = $formGeneral["email"];
 
-    $nombre     = $formGeneral["name"];
-    $apellido   = $formGeneral["lastname"];
-    $email      = $formGeneral["email"];
-    $consulta   = $formGeneral["query"];
- 
-    if(isset($nombre) || isset($apellido) || isset($email) || isset($consulta)){
- 
-        $header = getHeader();
+    //Armo email 
+    $post = array('from' => 'lucianooromero1@gmail.com',
+        'fromName' => 'Deportivo Bidon Web',
+        'apikey' => '389F18972B7310A4FA5EB4CA7D5A2ED2080630BE78883E78DA0A43271CD67F8FAFF33663A8CDD01B40D35FDF718EF472',
+        'subject' => 'Consulta General',
+        'to' =>  'lucianooromero1@gmail.com',
+        'bodyHtml' => '
+            <h1>Información del consultante: </h1>
+            <b style="color: #5bc0de">Apellido: </b><p>' . $formGeneral["name"] . '</p><br>
+            <b style="color: #5bc0de">Nombre: </b><p>' . $formGeneral["lastname"] . '</p><br>
+            <b style="color: #5bc0de">Email: </b><p>' . $formGeneral["email"] . '</p><br>
+            <b style="color: #5bc0de">Consulta: </b><p>' . $formGeneral["query"] . '</p><br>
+        ',
+        'bodyText' => 'Text Body',
+        'isTransactional' => false
+    );
 
-        $mensaje = "Este mensaje fue enviado por: $nombre \r\n";
-        $mensaje.= "Su email es: $email \r\n";
-        $mensaje.= "Mensaje: $consulta \r\n";
-        $mensaje.= "Enviado el día: " . date("d/m/Y", time());
-        
-        $asunto = "Probando envío de email";
-    
-        sendEmail($email, $asunto, $mensaje, $header);
-        
-    }
+    sendEmail($post);
 }
 
+//Mail enviado desde el select SÉ PARTE DE BIDON
 if(isset($_POST["JoinUs"])){
+    $formJoinUs = $_POST["JoinUs"];
 
-    $formJoinUs  = $_POST["JoinUs"]; 
-
-    $nombre     = $formJoinUs["name"];
-    $apellido   = $formJoinUs["lastname"];
-    $email      = $formJoinUs["email"];
-    $dni        = $formJoinUs["dni"];
-    $telefono   = $formJoinUs["cellphone"];
-    $calle      = $formJoinUs["adress"];
-    $nro        = $formJoinUs["nro"];
-    $piso       = $formJoinUs["floor"];
-    $depto      = $formJoinUs["apartment"]; 
-    $puesto     = $formJoinUs["position"];
-    $pierna     = $formJoinUs["leg"];
-    $encontrado = $formJoinUs["find"];
-    $foto       = $formJoinUs["photo"];
-
-    $header = getHeader($email);
-
-    //Falta armar el mensaje
-
-    $this->sendEmail($email, $asunto, $mensaje, $header);
-    
+    sendEmail($post);
 }
 
-function getHeader(){
+function sendEmail($post){
+    $url = 'https://api.elasticemail.com/v2/email/send';
 
-    $header = "From: lucianooromero1@gmail.com \r\n";
-    $header.= "X-Mailer: PHP/" . phpversion() . " \r\n";
-    $header.= 'Mime-Version: 1.0 \r\n';
-    $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
- 
-    return $header;
-}
-
-function sendEmail($para, $asunto, $mensaje, $header){
-    var_dump(mail($para, $asunto, utf8_decode($mensaje), $header));
+    try{
+        $ch = curl_init();
+        curl_setopt_array($ch, array(
+            CURLOPT_URL => $url,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $post,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HEADER => false,
+            CURLOPT_SSL_VERIFYPEER => false
+        ));
         
-    //header("Location: contact.html");
+        $result=curl_exec ($ch);
+        curl_close ($ch);
+        
+        header("Location: contact.html");	
+    }
+    catch(Exception $ex){
+        echo $ex->getMessage();
+    }
 }
