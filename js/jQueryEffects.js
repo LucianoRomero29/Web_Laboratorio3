@@ -98,14 +98,12 @@ $(document).ready(function(){
         function(){
             $(this).animate({
                 fontSize: "35px",
-                color: "green",
             });
             $(this).css("color", "#09456b")
         },
         function(){
             $(this).animate({
                 fontSize: "25px",
-                color: "#FF0000"
             });
             $(this).css("color", "#0072BB")
         }
@@ -120,12 +118,10 @@ $(document).ready(function(){
         }
     );
 
-    $(".logoBidon").hover(
-        function(){
-            
-        },
-        function(){
-            
-        }
-    );
+    $(".logoBidon").mouseenter(function(){
+        $(this).addClass("change").delay(5000).queue(function(){
+            $(this).removeClass("change").dequeue();
+        });
+        
+    });
 });
