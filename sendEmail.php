@@ -2,8 +2,6 @@
 
 $formGeneral = $_POST["General"];
 
-// $formJoinUs  = $_POST["JoinUs"]; 
-
 // //El que NO sea nulo, va a ser el form que envíe el email
 if(isset($_POST["General"])){
    $nombre     = $formGeneral["name"];
@@ -31,23 +29,3 @@ if(isset($_POST["General"])){
       header("Location: contact.html");
    }
 }
-
-
-// if(isset($_POST["JoinUs"])){
-//     $nombre     = $formJoinUs["name"];
-//     $apellido   = $formJoinUs["lastname"];
-//     $email      = $formJoinUs["email"];
-//     $dni        = $formJoinUs["dni"];
-//     $telefono   = $formJoinUs["cellphone"];
-//     $calle      = $formJoinUs["adress"];
-//     $nro        = $formJoinUs["nro"];
-//     $piso       = $formJoinUs["floor"];
-//     $depto      = $formJoinUs["apartment"]; 
-//     $puesto     = $formJoinUs["position"];
-//     $pierna     = $formJoinUs["leg"];
-//     $encontrado = $formJoinUs["find"];
-//     $foto       = $formJoinUs["photo"];
-
-
-//     var_dump($formGeneral);
-// }
