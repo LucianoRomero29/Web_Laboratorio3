@@ -16,6 +16,7 @@
     <script src="js/validacionesGrales.js"></script>
     <script src="js/sweetAlert.js"></script>
     <script src="js/jQueryEffects.js"></script>
+    <script src="js/ajaxJson.js"></script>
     <title>Contáctenos</title>
 </head>
 <body>
@@ -34,16 +35,16 @@
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item hover-underline-animation">
-                            <a class="nav-link" href="news.html">Noticias</a>
+                            <a class="nav-link" href="noticias.html">Noticias</a>
                         </li>
                         <li class="nav-item hover-underline-animation">
-                            <a class="nav-link" href="photos.html">Galeria de fotos</a>
+                            <a class="nav-link" href="fotos.html">Galeria de fotos</a>
                         </li>
                         <li class="nav-item hover-underline-animation">
-                            <a class="nav-link" href="contact.html">Contáctenos</a>
+                            <a class="nav-link" href="contacto.html">Contáctenos</a>
                         </li>
                         <li class="nav-item hover-underline-animation">
-                            <a class="nav-link" href="products.html">Productos</a>
+                            <a class="nav-link" href="productos.html">Productos</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -54,9 +55,23 @@
             </div>
         </nav>
     </section>
-    <section>
+    <section class="content">
         <div class="container">
+            <div class="separator text-muted h5">Nuestros Productos</div>
+            <button class="btn btn-info" id="btnJson">JSON</button>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody id="res">
 
+                </tbody>
+            </table>
         </div>
     </section>
     <footer>
