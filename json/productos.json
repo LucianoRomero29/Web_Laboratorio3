@@ -1,0 +1,23 @@
+
+[
+  {
+    "nombre":"Remera",
+    "descripcion":"Remera actualmente titular del equipo de Bidón",
+    "url":"img/productos/remera.png"
+  },
+  {
+    "nombre":"Pelota",
+    "descripcion":"Pelota ganadora del ascenso a la categoría A",
+    "url":"img/productos/pelota.png"
+  },
+  {
+    "nombre":"Gorra",
+    "descripcion":"Gorra del flamante DT de Bidón",
+    "url":"img/productos/gorra.png"
+  },
+  {
+    "nombre":"Equipo de Mate",
+    "descripcion":"Mate cábala de los suplentes",
+    "url":"img/productos/equipo_mate.png"
+  } 
+]

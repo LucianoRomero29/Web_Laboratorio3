@@ -5,8 +5,8 @@ window.onload = function(){
     }
 }
 
-function validarEmail() {
-    email = document.getElementById("email");
+function validarEmail(id) {
+    email = document.getElementById(id);
     
     emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if (emailRegex.test(email.value)) {
