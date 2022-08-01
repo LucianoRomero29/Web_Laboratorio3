@@ -84,7 +84,7 @@
                         <div class="col-md-4"></div>
                         <div class="col-md-5">
                             <label for="email">Email</label>
-                            <input id="email" class="input form-control" name="General[email]" placeholder="Ej: ejemplo@gmail.com" onfocusout="validarEmail()">
+                            <input id="email" class="input form-control" name="General[email]" placeholder="Ej: ejemplo@gmail.com" onfocusout="validarEmail('email')">
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -111,18 +111,18 @@
                         <div class="col-md-1"></div>
                         <div class="col-md-4 divInput">
                             <label for="lastname">Apellido</label>
-                            <input class="inputText input form-control" name="JoinUs[lastname]" onfocusout="validarInputText(0)">
+                            <input class="inputText input form-control" name="JoinUs[lastname]" onfocusout="validarInputText(2)">
                         </div>
                         <div class="col-md-4 divInput">
                             <label for="name">Nombre</label>
-                            <input class="inputText input form-control" name="JoinUs[name]" onfocusout="validarInputText(1)">
+                            <input class="inputText input form-control" name="JoinUs[name]" onfocusout="validarInputText(3)">
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-1"></div>
                         <div class="col-md-4">
                             <label for="adress">Calle</label>
-                            <input class="inputText input form-control" name="JoinUs[adress]" onfocusout="validarInputText(2)">
+                            <input class="inputText input form-control" name="JoinUs[adress]" onfocusout="validarInputText(4)">
                         </div>
                         <div class="col-md-2 divInput">
                             <label for="nro">N°</label>
@@ -141,7 +141,7 @@
                         <div class="col-md-1"></div>
                         <div class="col-md-4">
                             <label for="email">Email</label>
-                            <input id="email" class="input form-control" name="JoinUs[email]" placeholder="Ej: ejemplo@gmail.com" onfocusout="validarEmail()">
+                            <input id="emailTwo" class="input form-control" name="JoinUs[email]" placeholder="Ej: ejemplo@gmail.com" onfocusout="validarEmail('emailTwo')">
                         </div>
                         <div class="col-md-3 divInput">
                             <label for="dni">DNI <span class="text-success cursorPointer" data-toggle="tooltip" data-placement="top" title="Sin puntos">(?)</span></label>
@@ -164,18 +164,18 @@
                             <label>Puesto</label>
                             <select class="form-select mb-3 input" name="JoinUs[position]">
                                 <option value="" selected>Seleccione una opción</option>
-                                <option value="arquero">Arquero</option>
-                                <option value="defensor">Defensor</option>
-                                <option value="mediocampista">Mediocampista</option>
-                                <option value="delantero">Delantero</option>
+                                <option value="Arquero">Arquero</option>
+                                <option value="Defensor">Defensor</option>
+                                <option value="Mediocampista">Mediocampista</option>
+                                <option value="Delantero">Delantero</option>
                             </select>
                         </div>
                         <div class="col-md-4">
                             <label>Pierna hábil</label>
                             <select class="form-select mb-3 input" name="JoinUs[leg]">
                                 <option value="" selected>Seleccione una opción</option>
-                                <option value="derecha">Derecha</option>
-                                <option value="izquierda">Izquierda</option>
+                                <option value="Derecha">Derecha</option>
+                                <option value="Izquierda">Izquierda</option>
                             </select>
                         </div>
                     </div>
@@ -191,19 +191,9 @@
                                 <option value="4">Otro</option>
                             </select>
                         </div>
-                        <div id="inputJoinUs" class="col-md-4 inputJoinUs">
+                        <div id="inputJoinUs" class="col-md-6 col-lg-4 inputJoinUs">
                             <label id="textOption"></label>
-                            <input id="inputOption" class="form-control" type="text">
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4">
-                            <label for="myfile">Sube una foto así te conocemos</label>
-                            <input class="form-control" id="fotoPerfil" type="file" name="JoinUs[photo]" onchange="validarFoto()">
-                        </div>
-                        <div id="inputJoinUs" class="col-md-4 inputJoinUs">
-
+                            <input id="inputOption" class="form-control" name="JoinUs[reason]" type="text">
                         </div>
                     </div>
                     <div class="text-center mt-3">

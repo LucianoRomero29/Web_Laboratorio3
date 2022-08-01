@@ -59,13 +59,13 @@ $(document).ready(function(){
             div.fadeIn("slow");
             input.required = true;
             if(x == 2){
-                label.innerHTML = "¿Cuál?"
+                label.text ("¿Cuál?");
             }
             if(x == 3){
-                label.innerHTML = "Nombre y Apellido del conocido/a"
+                label.text ("Nombre y Apellido del conocido/a");
             }
             if(x == 4){
-                label.innerHTML = "Otro"
+                label.text ("Otro");
             }
             
         }
