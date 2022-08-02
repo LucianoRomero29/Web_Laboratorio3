@@ -4,6 +4,7 @@ $(document).ready(function(){
     $("#partidosFotos").click(function(){
         $("#partidos").slideToggle();
         $("#camisetas").hide();
+        $("#memes").hide();
         $(".masFotos").hide();
     });
 

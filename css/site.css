@@ -17,8 +17,8 @@
     color: white !important;
 }
 
-.maxHeight{
-    height: 300px !important;
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
 }
 
 .cardNoticia{
@@ -132,6 +132,12 @@
     transform-origin: bottom left;
 }
 
+.imgJson{
+    width: 100%; 
+    height: 200px; 
+    object-fit: contain;
+}
+
 .inputSuccess{
     border-bottom: 2px solid green !important;
 }
@@ -152,6 +158,10 @@
     transform: scale(1.1);
     transition: 1s;
 } */
+
+.maxHeight{
+    height: 300px !important;
+}
 
 nav .active{
     color: #0072BB !important;
@@ -245,18 +255,26 @@ table tbody tr:hover {
 
 /* Media query para PC  */
 @media (min-width: 1001px){
-    .itemIndex{
-        height: 500px;
-    }
-
     /* Esta imagen es del card dentro de la pagina de noticias */
     .background img, .carruselIndex img{
         position: relative;
         top: -55px;
     }
 
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 50%;
+        margin: 0px auto;
+        border-radius: 5px;
+    }
+      
     .divsFotos{
         margin: 15px;
+    }
+
+    .itemIndex{
+        height: 500px;
     }
 
     .ultimasNoticias{
@@ -278,10 +296,24 @@ table tbody tr:hover {
     .divsFotos img{
         margin-top: 10px;
     }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 100%;
+        border-radius: 5px;
+    }
 }
 
 /* Media query para telefonos */
 @media (max-width: 700px) {
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 100%;
+        border-radius: 5px;
+    }
     
     .cardSubNews{
         margin-top: 50px !important;

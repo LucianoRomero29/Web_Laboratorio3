@@ -2,8 +2,6 @@
 
 //Mail enviado desde el select CONSULTA GENERAL
 if(isset($_POST["General"])){
-    echo "entra aca al general?";
-    die;
     $formGeneral = $_POST["General"];
     $email       = $formGeneral["email"];
 
