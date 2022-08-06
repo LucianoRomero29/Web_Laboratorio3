@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    //Con la directiva %c, puedo agregar styles al console log
+    //console.log("%c DALE %c BOCA %c DALE", "color: blue", "color: yellow", "color: blue");
     
     $('#selectInfo').change(function(){
         if($('#selectInfo').val() == "jornada") {
